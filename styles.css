@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-light: hsl(179, 62%, 46%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-gray);
+   
+}
+
+.container {
+    font-family: 'Karla', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 85%;
+    min-height: 100vh;
+}
+
+.top {
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+}
+
+.middle {
+    color: white;
+    background-color: var(--cyan); 
+}
+
+.bottom {
+    border-radius: 0 0 5px 5px;
+    color: white;
+    background-color: var(--cyan-light);
+}
+
+.top, .middle, .bottom {
+    padding: 25px 20px;
+    width: 100%;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Headings */
+
+.top h1, .middle h2, .bottom h2 {
+    margin-bottom: 20px;
+}
+
+.top h1 {
+    color: var(--cyan);
+    font-size: 20px;
+}
+
+.top p#sub {
+    color: var(--bright-yellow);
+    font-weight: bold;
+    line-height: normal;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.top p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--grayish-blue);
+}
+
+.middle h2 {
+    font-size: 18px;
+}
+
+.middle p#cost {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: var(--light-gray);
+    margin-bottom: 10px;
+}
+
+.middle p#access {
+    margin-bottom: 25px;
+}
+
+.middle p#cost span {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.middle button {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--bright-yellow);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.bottom h2 {
+    font-size: 18px;
+}
+
+.bottom p {
+    font-size: 14px;
+}
+
+.fullscreen-bottom {
+    min-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .fullscreen-bottom {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .container {
+        width: 42%;
+    }
+
+    .top h1 {
+        font-size: 24px;
+    }
+
+    .top p#sub {
+        font-size: 18px;
+    }
+    
+    .top p {
+        font-size: 15px;
+    }
+
+    .middle {
+        border-radius: 0 0 0 5px;
+    }
+
+    .bottom {
+        border-radius: 0 0 5px 0;
+    }
+
+    .top, .middle, .bottom {
+        padding: 30px 30px;
+    }
+}
